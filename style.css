@@ -1,4 +1,8 @@
 /*global*/
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: arial;
 	background: #f2f2f2;
@@ -56,12 +60,16 @@ header h1 {
 /*portfolio*/
 #portfolio .container {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 3vw;
 }
 
 #portfolio img {
 	width: 100%;
+}
+
+#portfolio img:first-of-type {
+	border: 1px solid #fff;
 }
 
 #portfolio button {
@@ -92,6 +100,12 @@ header h1 {
 #contact p {
 	font-size: 1.6vw;
 	color: #808080;
+}
+
+#contact a:first-of-type {
+	font-size: 1.6vw;
+	color: #808080;
+	text-decoration: none;
 }
 
 #contact i {
@@ -128,6 +142,10 @@ footer p {
 	}
 
 	#contact p {
+		font-size: 15px;
+	}
+
+	#contact a:first-of-type {
 		font-size: 15px;
 	}
 
