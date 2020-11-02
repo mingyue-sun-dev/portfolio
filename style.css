@@ -1,3 +1,4 @@
+global*/
 :root {
 	--black: #181818;
 	--darkgray: #1d1d1d;
@@ -65,6 +66,7 @@ p {
 	line-height: 1.4;
 }
 
+/*header*/
 header {
 	position: sticky;
 	top: 0;
@@ -97,6 +99,7 @@ nav ul li {
 	margin-left: 50px;
 }
 
+/*showcase*/
 #showcase {
 	height: calc(100vh - 76px);
 	display: flex;
@@ -138,6 +141,7 @@ h1 {
 	background: var(--transparent-green);
 }
 
+/*projects*/
 .card {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -210,6 +214,7 @@ a:hover .overlay {
 	order: 1;
 }
 
+/*about*/
 #about .container > div {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -235,6 +240,7 @@ a:hover .overlay {
 	margin: 5px;
 }
 
+/*contact*/
 #contact {
 	text-align: center;
 }
@@ -248,6 +254,7 @@ a:hover .overlay {
 	padding: 80px 0;
 }
 
+/*footer*/
 footer {
 	background: var(--black);
 	text-align: center;
@@ -258,6 +265,7 @@ footer p {
 	padding: 15px 0;
 }
 
+/*responsive*/
 @media (max-width: 768px) {
 	nav ul {
 		position: absolute;
@@ -305,6 +313,7 @@ footer p {
 	}
 }
 
+/*animations*/
 @keyframes slidein {
 	0% {
 	    transform: translateY(60px);
@@ -324,33 +333,3 @@ footer p {
 @keyframes menuSlideout {
 	100% { transform: translateX(75vw); }
 }
-
-/*@media (max-width: 767px) {
-	h2 {
-		font-size: 30px;
-	}
-
-	#portfolio .container {
-		grid-template-columns: 1fr;
-	}
-
-	#portfolio button {
-		font-size: 15px;
-	}
-
-	#about p {
-		font-size: 15px;
-	}
-
-	#contact p {
-		font-size: 15px;
-	}
-
-	#contact a:first-of-type {
-		font-size: 15px;
-	}
-
-	#contact h3 {
-		font-size: 13px;
-	}
-}*/
