@@ -27,6 +27,62 @@ window.addEventListener("resize", () => {
   }
 });
 
+// Typing Animation
+document.addEventListener('DOMContentLoaded', function() {
+  const typingText = document.querySelector('.typing-text');
+  const cursor = document.querySelector('.cursor');
+
+  // Only start if elements exist
+  if (!typingText || !cursor) return;
+
+  const texts = [
+    'Frontend dev.',
+    'React enthusiast.',
+    'Problem solver.',
+    'Forever learning.'
+  ];
+
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typeSpeed = 100;
+
+  function typeWriter() {
+    const currentText = texts[textIndex];
+    
+    if (isDeleting) {
+      // Remove character
+      typingText.textContent = currentText.substring(0, charIndex - 1);
+      charIndex--;
+      typeSpeed = 50; // Faster when deleting
+    } else {
+      // Add character
+      typingText.textContent = currentText.substring(0, charIndex + 1);
+      charIndex++;
+      typeSpeed = 100; // Normal typing speed
+    }
+    
+    // Check if word is complete
+    if (!isDeleting && charIndex === currentText.length) {
+      // Pause at end of word
+      typeSpeed = 2000;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      // Move to next word
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+      typeSpeed = 500; // Pause before typing new word
+    }
+    
+    setTimeout(typeWriter, typeSpeed);
+  }
+
+  // Start typing animation after page loads
+  setTimeout(() => {
+    typeWriter();
+  }, 1500);
+});
+
 // Contact Modal Functionality
 const contactBtn = document.getElementById("contact-btn");
 const contactModal = document.getElementById("contact-modal");
@@ -46,7 +102,6 @@ const closeContactModal = () => {
 };
 
 // EmailJS Configuration
-// You'll need to replace these with your actual EmailJS credentials
 const EMAILJS_SERVICE_ID = "service_go951ly";
 const EMAILJS_TEMPLATE_ID = "template_agzaakg";
 const EMAILJS_PUBLIC_KEY = "vK51HBNLPXm2-psnN";
