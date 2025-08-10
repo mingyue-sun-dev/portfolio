@@ -161,6 +161,22 @@ h1 {
   width: 100%;
 }
 
+.placeholder-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--lightgray);
+}
+
+.placeholder-image span {
+  color: var(--lightgray);
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -215,29 +231,49 @@ a:hover .overlay {
 }
 
 /*about*/
-#about .container > div {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  margin: 100px 0;
+.about-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
   font-size: 20px;
+  line-height: 1.6;
 }
 
-.skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.skills ul {
+/*skills*/
+.skills > ul {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 0 20px;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: start;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.skills ul li {
-  margin: 5px;
+.skills > ul > li {
+  margin: 0;
+  font-weight: bold;
+  color: var(--green);
+  font-size: 18px;
+}
+
+.skills ul ul {
+  list-style: none;
+  padding: 15px 0 0 0;
+  margin: 0;
+  columns: 1;
+}
+
+.skills > ul > li:nth-child(2) ul {
+  columns: 2;
+  column-gap: 30px;
+}
+
+.skills ul ul li {
+  margin: 8px 0;
+  color: var(--lightgray);
+  font-size: 16px;
+  break-inside: avoid;
 }
 
 /*contact*/
@@ -260,6 +296,7 @@ a:hover .overlay {
 
 #projects,
 #about,
+#skills,
 #contact {
   padding: 80px 0;
 }
@@ -273,6 +310,167 @@ footer {
 footer p {
   margin: 0;
   padding: 15px 0;
+}
+
+/*contact modal*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: var(--darkgray);
+  margin: 5% auto;
+  padding: 0;
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 1px solid var(--gray);
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: var(--green);
+  font-size: 22px;
+}
+
+.close {
+  color: var(--lightgray);
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: var(--green);
+}
+
+#contact-form {
+  padding: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--lightgray);
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  background-color: var(--black);
+  color: var(--lightgray);
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-message {
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  display: none;
+}
+
+.form-message.success {
+  background-color: rgba(8, 253, 216, 0.1);
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.form-message.error {
+  background-color: rgba(255, 99, 71, 0.1);
+  color: #ff6347;
+  border: 1px solid #ff6347;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.btn-cancel,
+.btn-send {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.btn-cancel {
+  background-color: var(--gray);
+  color: var(--lightgray);
+}
+
+.btn-cancel:hover {
+  background-color: var(--lightgray);
+  color: var(--darkgray);
+}
+
+.btn-send {
+  background-color: var(--green);
+  color: var(--darkgray);
+}
+
+.btn-send:hover {
+  background-color: var(--transparent-green);
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.btn-send:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-send:disabled:hover {
+  background-color: var(--green);
+  color: var(--darkgray);
+  border: none;
 }
 
 /*responsive*/
@@ -314,12 +512,27 @@ footer p {
     order: 0;
   }
 
-  #about .container > div {
-    grid-template-columns: 1fr;
+  .about-content {
+    font-size: 18px;
   }
 
-  .skills ul {
-    padding: 0;
+  .skills > ul {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-cancel,
+  .btn-send {
+    width: 100%;
   }
 }
 

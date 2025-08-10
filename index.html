@@ -24,6 +24,7 @@
             <li><a href="index.html">HOME</a></li>
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#skills">SKILLS</a></li>
             <li><a href="#contact">CONTACT</a></li>
             <li>
               <a href="assets/Mingyue_Sun_Resume.pdf" target="_blank">RESUME</a>
@@ -39,8 +40,8 @@
       <section id="showcase">
         <div class="container">
           <h1>Hi, I'm<br />Mingyue Sun.</h1>
-          <p>Web Developer</p>
-          <a href="mailto: mingyues0320@gmail.com">Contact me!</a>
+          <p>Frontend dev. Forever learning.</p>
+          <a href="#" id="contact-btn">Contact me!</a>
         </div>
       </section>
 
@@ -48,40 +49,83 @@
         <div class="container">
           <h2>Some Things I've Built</h2>
           <section class="card left-aligned-card">
-            <a href="https://secret-ocean-26738.herokuapp.com/" target="_blank">
-              <img
-                src="assets/images/travel-journals.png"
-                alt="travel-journals"
-              />
+            <a href="#" target="_blank">
+              <div class="placeholder-image">
+                <span>Coming Soon</span>
+              </div>
               <div class="overlay"></div>
             </a>
             <div>
-              <h3>Travel Journals</h3>
+              <h3>KPulse</h3>
               <p>
-                A full-stack web application allowing users to write travel
-                journals and share them with others. Users can create a new
-                journal, update or delete an existing journal, view public
-                journals written by other users, and more.
+                A K-Pop artist dashboard web app using the App Router
+                architecture with TypeScript and Tailwind CSS. The project
+                follows a modular, scalable setup for tracking K-Pop artists
+                with real-time statistics and insights. Work in progress.
               </p>
               <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>MongoDB</li>
-                <li>EJS</li>
-                <li>Bootstrap</li>
+                <li>Next.js</li>
+                <li>TypeScript</li>
+                <li>Tailwind CSS</li>
+                <li>App Router</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="card right-aligned-card">
+            <a href="#" target="_blank">
+              <div class="placeholder-image">
+                <span>Coming Soon</span>
+              </div>
+              <div class="overlay"></div>
+            </a>
+            <div>
+              <h3>Coral Ecommerce Website</h3>
+              <p>
+                A full-stack e-commerce web app with React and Spring Boot
+                featuring product display, shopping cart, secure JWT
+                authentication, and Stripe payment integration, backed by MySQL
+                and enhanced with search, filters, and user reviews.
+              </p>
+              <ul>
+                <li>React</li>
+                <li>Spring Boot</li>
+                <li>MySQL</li>
+                <li>JWT Authentication</li>
+                <li>Stripe</li>
               </ul>
               <a
-                href="https://github.com/msun0320/TravelJournals"
+                href="https://github.com/msun0320/coral-ecommerce-website"
                 target="_blank"
                 ><i class="fab fa-github fa-lg"></i
               ></a>
-              <a
-                href="https://secret-ocean-26738.herokuapp.com/"
-                target="_blank"
-                ><i class="fas fa-external-link-alt fa-lg"></i
+            </div>
+          </section>
+
+          <section class="card left-aligned-card">
+            <a href="#" target="_blank">
+              <div class="placeholder-image">
+                <span>Coming Soon</span>
+              </div>
+              <div class="overlay"></div>
+            </a>
+            <div>
+              <h3>Maze Solver</h3>
+              <p>
+                A maze solving application using React enabling users to create
+                and solve their own mazes. Implemented DFS (Depth-First Search)
+                and BFS (Breadth-First Search) algorithms to visualize the
+                maze-solving process.
+              </p>
+              <ul>
+                <li>React</li>
+                <li>JavaScript</li>
+                <li>DFS Algorithm</li>
+                <li>BFS Algorithm</li>
+                <li>Data Structures</li>
+              </ul>
+              <a href="https://github.com/msun0320/maze-solver" target="_blank"
+                ><i class="fab fa-github fa-lg"></i
               ></a>
             </div>
           </section>
@@ -139,6 +183,45 @@
           </section>
 
           <section class="card right-aligned-card">
+            <a href="https://secret-ocean-26738.herokuapp.com/" target="_blank">
+              <img
+                src="assets/images/travel-journals.png"
+                alt="travel-journals"
+              />
+              <div class="overlay"></div>
+            </a>
+            <div>
+              <h3>Travel Journals</h3>
+              <p>
+                A full-stack web application allowing users to write travel
+                journals and share them with others. Users can create a new
+                journal, update or delete an existing journal, view public
+                journals written by other users, and more.
+              </p>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+                <li>EJS</li>
+                <li>Bootstrap</li>
+              </ul>
+              <a
+                href="https://github.com/msun0320/TravelJournals"
+                target="_blank"
+                ><i class="fab fa-github fa-lg"></i
+              ></a>
+              <a
+                href="https://secret-ocean-26738.herokuapp.com/"
+                target="_blank"
+                ><i class="fas fa-external-link-alt fa-lg"></i
+              ></a>
+            </div>
+          </section>
+
+          <section class="card left-aligned-card">
             <a href="https://msun0320.github.io/movie-app" target="_blank">
               <img src="assets/images/movie-app.png" alt="movie-app" />
               <div class="overlay"></div>
@@ -170,40 +253,58 @@
       <section id="about">
         <div class="container">
           <h2>About Me</h2>
-          <div>
-            <div>
-              <p>Hello! I'm Mingyue.</p>
-              <p>
-                After graduating with an Applied Mathematics degree, I
-                discovered the beauty of coding and started to teach myself web
-                technologies. Creating user-friendly applications and websites
-                are what I truly enjoy doing. Currently, I am looking for an
-                opportunity to start my career as a web developer. I am a fast
-                learner and can adapt to whatever technologies are required.
-              </p>
-            </div>
-            <div class="skills">
-              <h3>Technologies I've Worked With</h3>
-              <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Sass</li>
-                <li>Bootstrap</li>
-                <li>JavaScript (ES6+)</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>MongoDB</li>
-                <li>Java</li>
-                <li>Python</li>
-                <li>PHP</li>
-                <li>SQL</li>
-                <li>Jasmine</li>
-                <li>npm</li>
-                <li>Git/Github</li>
-                <li>WordPress</li>
-              </ul>
-            </div>
+          <div class="about-content">
+            <p>Hello! I'm Mingyue.</p>
+            <p>
+              Experienced web developer specializing in creating and maintaining
+              over 100 responsive landing pages using HTML, CSS, JavaScript, and
+              jQuery. Skilled in managing WordPress sites, optimizing page
+              performance, conducting A/B testing to boost conversions, and
+              delivering data-driven insights to clients while collaborating
+              closely with cross-functional teams.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="container">
+          <h2>Technologies I've Worked With</h2>
+          <div class="skills">
+            <ul>
+              <li>
+                Languages
+                <ul>
+                  <li>JavaScript (ES6+), TypeScript</li>
+                  <li>HTML, CSS, Sass</li>
+                  <li>Java</li>
+                  <li>Python</li>
+                  <li>PHP</li>
+                  <li>SQL</li>
+                </ul>
+              </li>
+              <li>
+                Development & Tools
+                <ul>
+                  <li>React</li>
+                  <li>Next.js</li>
+                  <li>Tailwind CSS</li>
+                  <li>Bootstrap</li>
+                  <li>jQuery</li>
+                  <li>Figma</li>
+                  <li>Unbounce</li>
+                  <li>Spring Boot</li>
+                  <li>Node.js, Express.js</li>
+                  <li>MySQL</li>
+                  <li>MongoDB</li>
+                  <li>Jasmine</li>
+                  <li>VWO (Visual Website Optimizer)</li>
+                  <li>npm</li>
+                  <li>Git, GitHub</li>
+                  <li>WordPress</li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -236,6 +337,39 @@
       <p>Built by Mingyue Sun</p>
     </footer>
 
+    <!-- Contact Form Modal -->
+    <div id="contact-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Send me a message</h3>
+          <span class="close">&times;</span>
+        </div>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="sender-email">Your Email *</label>
+            <input type="email" id="sender-email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject (Optional)</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?">
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+          </div>
+          <div id="form-message" class="form-message"></div>
+          <div class="form-actions">
+            <button type="button" class="btn-cancel">Cancel</button>
+            <button type="submit" class="btn-send">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" style="display: none;">Sending...</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
