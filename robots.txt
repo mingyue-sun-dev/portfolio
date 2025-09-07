@@ -1,2 +1,0 @@
-User-agent: *
-Disallow: /assets/Mingyue_Sun_Resume.pdf
