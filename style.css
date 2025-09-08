@@ -123,13 +123,14 @@ a:hover {
 
 .section {
   padding: 6rem 0 5rem;
-  scroll-margin-top: 2rem;
+  scroll-margin-top: 0.5rem;
+  contain: layout style;
 }
 
 @media (max-width: 768px) {
   .section {
     padding: 4rem 0 3rem;
-    scroll-margin-top: 1.5rem;
+    scroll-margin-top: 0.75rem;
   }
 }
 
@@ -436,7 +437,7 @@ nav {
 
 .typing-container {
   min-height: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .typing-text {
@@ -448,6 +449,7 @@ nav {
 .cursor {
   color: var(--accent);
   animation: blink 1s infinite;
+  will-change: opacity;
 }
 
 @keyframes blink {
@@ -471,6 +473,7 @@ nav {
 @media (max-width: 768px) {
   .hero-actions {
     justify-content: center;
+    margin-bottom: 2rem;
   }
 }
 
@@ -481,10 +484,10 @@ nav {
 .hero-image::before {
   content: "";
   position: absolute;
-  top: -2rem;
-  left: -2rem;
-  right: 2rem;
-  bottom: 2rem;
+  top: -1.5rem;
+  left: 7.5%;
+  right: 7.5%;
+  bottom: 2.5rem;
   background: linear-gradient(135deg, var(--accent), var(--accent-hover));
   border-radius: var(--border-radius-lg);
   z-index: -1;
@@ -492,10 +495,26 @@ nav {
 }
 
 .hero-image img {
-  width: 100%;
+  width: 85%;
   height: auto;
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-xl);
+  margin: 1rem 0 0 auto;
+  display: block;
+}
+
+.hero-attribution {
+  position: absolute;
+  bottom: -1.5rem;
+  right: 0;
+  font-size: 0.625rem;
+  opacity: 0.6;
+}
+
+.hero-attribution a {
+  color: var(--text-tertiary);
+  font-weight: 300;
+  text-decoration: none;
 }
 
 /* ===== PROJECTS SECTION ===== */
@@ -652,16 +671,12 @@ nav {
 }
 
 .about-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 4rem;
-  align-items: start;
+  display: block;
 }
 
 @media (max-width: 768px) {
   .about-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    display: block;
   }
 }
 
@@ -677,10 +692,6 @@ nav {
 
 .about-content h2 {
   margin-bottom: 2rem;
-}
-
-.about-text {
-  /* spacing handled by individual p elements */
 }
 
 .about-text p {
@@ -804,61 +815,92 @@ nav {
 }
 
 .contact-container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
 }
 
-.contact-container h2 {
-  margin-bottom: 1rem;
-}
-
-.contact-container p {
-  margin-bottom: 3rem;
-  font-size: 1.1rem;
-}
-
-.contact-methods {
+.contact-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-left h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.contact-details {
+  margin-bottom: 2rem;
 }
 
 .contact-method {
-  background: var(--bg-secondary);
-  padding: 2rem;
-  border-radius: var(--border-radius-lg);
-  border: 1px solid var(--border);
-  transition: var(--transition);
-}
-
-.contact-method:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--accent);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-method i {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--accent);
-  margin-bottom: 1rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
 }
 
 .contact-method h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
 }
 
 .contact-method p {
-  margin-bottom: 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.contact-form-container {
+  background: var(--bg-secondary);
+  padding: 2.5rem;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-left {
+    text-align: center;
+  }
+
+  .contact-method {
+    justify-content: center;
+  }
 }
 
 .social-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    justify-content: center;
+  }
 }
 
 .social-link {
@@ -1099,6 +1141,6 @@ footer p {
 
 @media (min-width: 1400px) {
   .container {
-    max-width: 1400px;
+    max-width: 1200px;
   }
 }
