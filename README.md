@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing my skills and projects as a front-end developer. Features a clean design with light/dark/system theme toggle, smooth animations, and optimized performance.
 
-[🌟 Live Demo](https://mingyue-sun-dev.github.io/portfolio-website)
+[🌟 Live Demo](https://mingyue-sun-dev.github.io/portfolio)
 
 ## Features
 
