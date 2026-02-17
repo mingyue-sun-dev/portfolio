@@ -1,27 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mingyue Sun - Front-end Developer</title>
+    <title>Mingyue Sun | Frontend Developer</title>
     <meta
       name="description"
-      content="Mingyue Sun - Front-end Developer specializing in React, Next.js, and responsive web applications. Building modern web solutions with clean code and great user experiences."
+      content="Mingyue Sun — Frontend Developer specializing in React, Next.js, and TypeScript. Building performant, accessible web applications."
     />
-    <meta property="og:title" content="Mingyue Sun - Front-end Developer" />
+    <meta property="og:title" content="Mingyue Sun | Frontend Developer" />
     <meta
       property="og:description"
-      content="Front-end Developer specializing in React, Next.js, and responsive web applications"
-    />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      content="Frontend Developer specializing in React, Next.js, and TypeScript."
     />
     <meta property="og:type" content="website" />
-    <meta
-      name="keywords"
-      content="front-end developer, react developer, javascript developer, web developer, software engineer, next.js, typescript"
-    />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -32,16 +24,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      as="style"
-    />
 
-    <!-- Font Awesome -->
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -49,481 +36,302 @@
       crossorigin="anonymous"
     />
 
-    <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
     <!-- Header -->
-    <header>
-      <nav>
-        <div class="container nav-container">
-          <a href="#hero" class="nav-brand">MS</a>
+    <header class="header">
+      <nav class="nav container">
+        <a href="#" class="nav-logo">MS<span class="accent">.</span></a>
 
-          <ul class="nav-menu" id="nav-menu">
-            <li><a href="#hero" class="nav-link active">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-            <li>
-              <a
-                href="assets/Mingyue_Sun_Resume.pdf"
-                target="_blank"
-                class="btn btn-secondary"
-                >Resume</a
-              >
-            </li>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li>
+            <a
+              href="assets/docs/mingyue-sun-resume.pdf"
+              target="_blank"
+              class="nav-link nav-resume"
+              >Resume</a
+            >
+          </li>
+        </ul>
 
-            <!-- Theme Toggle -->
-            <li class="theme-toggle">
-              <button
-                class="theme-btn active"
-                data-theme="system"
-                title="System theme"
-              >
-                <i class="fas fa-desktop"></i>
-              </button>
-              <button class="theme-btn" data-theme="light" title="Light theme">
-                <i class="fas fa-sun"></i>
-              </button>
-              <button class="theme-btn" data-theme="dark" title="Dark theme">
-                <i class="fas fa-moon"></i>
-              </button>
-            </li>
-          </ul>
+        <div class="nav-right">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <i class="fas fa-moon" id="theme-icon"></i>
+          </button>
 
           <button
-            class="mobile-menu-toggle"
-            id="mobile-menu-toggle"
-            aria-label="Toggle navigation"
+            class="mobile-toggle"
+            id="mobile-toggle"
+            aria-label="Toggle menu"
           >
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
       </nav>
     </header>
 
     <main>
-      <!-- Hero Section -->
-      <section id="hero" class="section">
+      <!-- Hero -->
+      <section class="hero" id="hero">
+        <!-- Gradient Orbs -->
+        <div class="hero-orbs">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+        </div>
+
+        <!-- Floating Shapes -->
+        <div class="floating-shapes">
+          <div class="shape shape-circle shape-1"></div>
+          <div class="shape shape-ring shape-2"></div>
+          <div class="shape shape-square shape-3"></div>
+          <div class="shape shape-circle shape-4"></div>
+          <div class="shape shape-ring shape-5"></div>
+        </div>
+
+        <div class="container hero-content">
+          <p class="hero-greeting reveal" data-parallax="0.03">
+            Hi, my name is
+          </p>
+          <h1 class="hero-name reveal" data-parallax="0.015">
+            <span class="gradient-text split-text" data-split
+              >Mingyue Sun.</span
+            >
+          </h1>
+          <h2 class="hero-title reveal" data-parallax="0.04">
+            Turning ideas into interactive reality.
+          </h2>
+          <p class="hero-description reveal">
+            Frontend developer with 4+ years of experience crafting polished
+            UIs and custom interactions. Always chasing that sweet spot where
+            clean code meets great design.
+          </p>
+          <div class="hero-cta reveal">
+            <a href="#projects" class="btn btn-primary magnetic"
+              >View My Work</a
+            >
+            <a href="#contact" class="btn btn-outline magnetic">Get In Touch</a>
+          </div>
+          <div class="hero-links reveal">
+            <a
+              href="https://github.com/mingyue-sun-dev"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/mingyue-sun-dev"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="mailto:mingyue.sun.dev@gmail.com" aria-label="Email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="section" id="about">
         <div class="container">
-          <div class="hero-container">
-            <div class="hero-content">
-              <p class="hero-subtitle">Hello, I'm</p>
-              <h1>Mingyue Sun</h1>
-              <div class="typing-container">
-                <span class="typing-text">Front-end Developer</span>
-                <span class="cursor">|</span>
-              </div>
+          <h2 class="section-title reveal">
+            <span class="section-number">01.</span> About
+          </h2>
+
+          <div class="about-grid reveal">
+            <div class="about-text">
               <p>
-                I build pixel-perfect, accessible digital experiences for the
-                web with a focus on clean code, modern technologies, and
-                user-centered design.
+                With a math background from UC Berkeley, I found my way into web
+                development. Currently building web pages and apps with
+                <span class="about-highlight">React</span>,
+                <span class="about-highlight">Next.js</span>, and
+                <span class="about-highlight">TypeScript</span> — some of what
+                I've been working on is right below.
               </p>
-
-              <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary">
-                  <i class="fas fa-envelope"></i>
-                  Get In Touch
-                </a>
-                <a href="#projects" class="btn btn-secondary">
-                  <i class="fas fa-folder-open"></i>
-                  View My Work
-                </a>
-              </div>
-            </div>
-
-            <div class="hero-image">
-              <img
-                src="assets/images/web-development-concept-with-character-situation-woman-developer-coding-and-creates-layout-builds-site-and-placing-content-elements-illustration-with-people-scene-in-flat-design-for-web-vector.jpg"
-                alt="Woman developer coding and creating layouts"
-                loading="lazy"
-              />
-              <div class="hero-attribution">
-                <a
-                  href="https://www.vecteezy.com/free-vector/web"
-                  target="_blank"
-                  rel="noopener"
-                  >Web Vectors by Vecteezy</a
-                >
-              </div>
+              <p>
+                What drives me is a want to build things that make the world a
+                little better — products people actually find useful, tools that
+                simplify someone's day. That's always the goal.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- About Section -->
-      <section id="about" class="section">
+      <!-- Projects -->
+      <section class="section" id="projects">
         <div class="container">
-          <div class="about-container">
-            <div class="about-content">
-              <div class="section-header">
-                <h2>About Me</h2>
-                <p>
-                  Passionate about creating digital solutions that make a
-                  difference
-                </p>
+          <h2 class="section-title reveal">
+            <span class="section-number">02.</span> Projects
+          </h2>
+
+          <!-- Primary Projects -->
+          <div class="projects-primary">
+            <!-- New Project 1 -->
+            <article class="project-row tilt-card reveal">
+              <div class="project-img project-img--placeholder">
+                <span class="placeholder-label">Coming Soon</span>
               </div>
-
-              <div class="about-text">
-                <p>
-                  I'm a front-end developer with a strong foundation in modern
-                  web technologies and a passion for creating exceptional user
-                  experiences. My journey in software development has equipped
-                  me with skills in React, Next.js, and the entire JavaScript
-                  ecosystem.
-                </p>
-
-                <p>
-                  I specialize in building responsive web applications that are
-                  not only visually appealing but also performant and
-                  accessible. I believe in writing clean, maintainable code and
-                  staying up-to-date with the latest industry best practices.
-                </p>
-
-                <div class="about-highlight">
-                  <h3>What I Bring to the Table</h3>
-                  <p>
-                    Strong problem-solving skills, attention to detail,
-                    collaborative mindset, and a commitment to continuous
-                    learning and improvement.
-                  </p>
-                </div>
+              <div class="project-info">
+                <h3 class="project-name">Project Title</h3>
+                <p class="project-desc">Project description goes here.</p>
+                <ul class="project-tech">
+                  <li>Tech</li>
+                </ul>
+                <div class="project-actions"></div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            </article>
 
-      <!-- Projects Section -->
-      <section id="projects" class="section">
-        <div class="container">
-          <div class="section-header">
-            <h2>Featured Projects</h2>
-            <p>
-              A collection of projects that showcase my technical skills and
-              problem-solving abilities
-            </p>
+            <!-- New Project 2 -->
+            <article class="project-row project-row--reverse tilt-card reveal">
+              <div class="project-img project-img--placeholder">
+                <span class="placeholder-label">Coming Soon</span>
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">Project Title</h3>
+                <p class="project-desc">Project description goes here.</p>
+                <ul class="project-tech">
+                  <li>Tech</li>
+                </ul>
+                <div class="project-actions"></div>
+              </div>
+            </article>
           </div>
 
-          <div class="projects-grid">
-            <!-- KPulse Project -->
-            <article class="project-card">
-              <div class="project-image">
+          <!-- Secondary Projects -->
+          <h3 class="section-subtitle reveal">More Projects</h3>
+          <div class="projects-secondary">
+            <!-- KPulse -->
+            <article class="project-card tilt-card reveal">
+              <div class="project-img">
                 <img
                   src="assets/images/kpulse.webp"
-                  alt="KPulse app"
+                  alt="KPulse — K-Pop discovery platform"
                   loading="lazy"
                 />
-                <div class="project-overlay">
-                  <a
-                    href="https://github.com/mingyue-sun-dev/kpulse"
-                    class="overlay-btn"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github"></i> Code
-                  </a>
-                  <a
-                    href="https://kpulse.vercel.app/"
-                    class="overlay-btn"
-                    target="_blank"
-                  >
-                    <i class="fas fa-external-link-alt"></i> Live
-                  </a>
-                </div>
               </div>
-              <div class="project-content">
-                <h3>KPulse</h3>
-                <p>
-                  A K-Pop artist discovery platform that aggregates real-time
-                  data from multiple APIs to provide fans with artist
-                  statistics, music, videos, and news. Implements intelligent
-                  API aggregation with primary/fallback sources, smart K-pop
-                  filtering, and real-time dashboards showing favorites,
-                  followed artists, and notifications.
+              <div class="project-info">
+                <h3 class="project-name">KPulse</h3>
+                <p class="project-desc">
+                  K-Pop artist discovery platform with real-time data from
+                  multiple APIs, smart filtering, and interactive dashboards.
                 </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Next.js</span>
-                  <span class="tech-tag">TypeScript</span>
-                  <span class="tech-tag">Tailwind CSS</span>
-                  <span class="tech-tag">Supabase</span>
-                  <span class="tech-tag">REST APIs</span>
-                </div>
-                <div class="project-links">
+                <ul class="project-tech">
+                  <li>Next.js</li>
+                  <li>TypeScript</li>
+                  <li>Tailwind CSS</li>
+                  <li>Supabase</li>
+                </ul>
+                <div class="project-actions">
                   <a
                     href="https://github.com/mingyue-sun-dev/kpulse"
-                    class="project-link"
                     target="_blank"
-                  >
-                    <i class="fab fa-github"></i> View Code
-                  </a>
+                    rel="noopener"
+                    aria-label="KPulse source code"
+                    ><i class="fab fa-github"></i
+                  ></a>
                   <a
                     href="https://kpulse.vercel.app/"
-                    class="project-link"
                     target="_blank"
-                  >
-                    <i class="fas fa-external-link-alt"></i> Live Demo
-                  </a>
+                    rel="noopener"
+                    aria-label="KPulse live demo"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
                 </div>
               </div>
             </article>
 
             <!-- Coral Ecommerce -->
-            <article class="project-card">
-              <div class="project-image">
+            <article class="project-card tilt-card reveal">
+              <div class="project-img">
                 <img
                   src="assets/images/coral-ecommerce.webp"
-                  alt="Coral Ecommerce app"
+                  alt="Coral Ecommerce — full-stack e-commerce app"
                   loading="lazy"
                 />
-                <div class="project-overlay">
-                  <a
-                    href="https://github.com/mingyue-sun-dev/coral-ecommerce-website"
-                    class="overlay-btn"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github"></i> Code
-                  </a>
-                </div>
               </div>
-              <div class="project-content">
-                <h3>Coral Ecommerce</h3>
-                <p>
-                  A full-stack e-commerce application enabling users to browse
-                  products, manage a shopping cart, and securely complete
-                  purchases. Features include user authentication, a searchable
-                  and paginated product catalog, shopping cart functionality,
-                  Stripe payment processing, product reviews and ratings, and a
-                  secure HTTPS environment.
+              <div class="project-info">
+                <h3 class="project-name">Coral Ecommerce</h3>
+                <p class="project-desc">
+                  Full-stack e-commerce app with authentication, product
+                  catalog, shopping cart, and Stripe payments.
                 </p>
-                <div class="project-tech">
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">TypeScript</span>
-                  <span class="tech-tag">Spring Boot</span>
-                  <span class="tech-tag">REST APIs</span>
-                  <span class="tech-tag">MySQL</span>
-                  <span class="tech-tag">Stripe</span>
-                  <span class="tech-tag">JWT</span>
-                </div>
-                <div class="project-links">
+                <ul class="project-tech">
+                  <li>React</li>
+                  <li>TypeScript</li>
+                  <li>Spring Boot</li>
+                  <li>MySQL</li>
+                  <li>Stripe</li>
+                </ul>
+                <div class="project-actions">
                   <a
                     href="https://github.com/mingyue-sun-dev/coral-ecommerce-website"
-                    class="project-link"
                     target="_blank"
-                  >
-                    <i class="fab fa-github"></i> View Code
-                  </a>
+                    rel="noopener"
+                    aria-label="Coral Ecommerce source code"
+                    ><i class="fab fa-github"></i
+                  ></a>
                 </div>
               </div>
             </article>
 
             <!-- Arch Studio -->
-            <article class="project-card">
-              <div class="project-image">
+            <article class="project-card tilt-card reveal">
+              <div class="project-img">
                 <img
                   src="assets/images/arch-studio.png"
-                  alt="Arch Studio website"
+                  alt="Arch Studio — architecture portfolio site"
                   loading="lazy"
                 />
-                <div class="project-overlay">
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">Arch Studio</h3>
+                <p class="project-desc">
+                  Responsive architecture portfolio with interactive sliders,
+                  Leaflet.js maps, and polished cross-browser design.
+                </p>
+                <ul class="project-tech">
+                  <li>HTML5</li>
+                  <li>SCSS</li>
+                  <li>JavaScript</li>
+                  <li>Leaflet.js</li>
+                </ul>
+                <div class="project-actions">
                   <a
                     href="https://github.com/mingyue-sun-dev/arch-studio"
-                    class="overlay-btn"
                     target="_blank"
-                  >
-                    <i class="fab fa-github"></i> Code
-                  </a>
+                    rel="noopener"
+                    aria-label="Arch Studio source code"
+                    ><i class="fab fa-github"></i
+                  ></a>
                   <a
                     href="https://mingyue-sun-dev.github.io/arch-studio"
-                    class="overlay-btn"
                     target="_blank"
-                  >
-                    <i class="fas fa-external-link-alt"></i> Live
-                  </a>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3>Arch Studio</h3>
-                <p>
-                  A responsive, multi-page architecture portfolio site featuring
-                  modular SCSS, interactive image sliders, mobile navigation,
-                  and form validation. Integrates third-party APIs like
-                  Leaflet.js for interactive maps and demonstrates polished,
-                  front-end-focused design with cross-browser and mobile
-                  compatibility.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">HTML5</span>
-                  <span class="tech-tag">SCSS</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">Leaflet.js</span>
-                </div>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/mingyue-sun-dev/arch-studio"
-                    class="project-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github"></i> View Code
-                  </a>
-                  <a
-                    href="https://mingyue-sun-dev.github.io/arch-studio"
-                    class="project-link"
-                    target="_blank"
-                  >
-                    <i class="fas fa-external-link-alt"></i> Live Demo
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Maze Solver -->
-            <article class="project-card">
-              <div class="project-image">
-                <img
-                  src="assets/images/maze-solver.webp"
-                  alt="Maze Solver app"
-                  loading="lazy"
-                />
-                <div class="project-overlay">
-                  <a
-                    href="https://github.com/mingyue-sun-dev/maze-solver"
-                    class="overlay-btn"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github"></i> Code
-                  </a>
-                  <a href="#" class="overlay-btn" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Live
-                  </a>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3>Maze Solver</h3>
-                <p>
-                  A React-based interactive 10x10 maze that visualizes
-                  pathfinding algorithms including BFS and DFS. Features
-                  real-time updates of visited cells and the final path, with
-                  click-and-drag wall creation and board reset functionality for
-                  user interaction.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">CSS3</span>
-                  <span class="tech-tag">Algorithm</span>
-                </div>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/mingyue-sun-dev/maze-solver"
-                    class="project-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github"></i> View Code
-                  </a>
-                  <a href="#" class="project-link" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Live Demo
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Travel Journals -->
-            <article class="project-card">
-              <div class="project-image">
-                <img
-                  src="assets/images/travel-journals.png"
-                  alt="Travel Journals app"
-                  loading="lazy"
-                />
-                <div class="project-overlay">
-                  <a
-                    href="https://github.com/mingyue-sun-dev/TravelJournals"
-                    class="overlay-btn"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github"></i> Code
-                  </a>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3>Travel Journals</h3>
-                <p>
-                  A full-stack web application for creating and sharing travel
-                  journals with photos, geolocation, and stories. Implements
-                  user authentication, public/private settings, interactive
-                  maps, and image management while ensuring security and data
-                  integrity.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">EJS</span>
-                  <span class="tech-tag">Bootstrap</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">Node.js</span>
-                  <span class="tech-tag">Express.js</span>
-                  <span class="tech-tag">MongoDB</span>
-                  <span class="tech-tag">Mongoose</span>
-                  <span class="tech-tag">Passport.js</span>
-                  <span class="tech-tag">Mapbox API</span>
-                  <span class="tech-tag">Cloudinary</span>
-                  <span class="tech-tag">Helmet.js</span>
-                </div>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/mingyue-sun-dev/TravelJournals"
-                    class="project-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github"></i> View Code
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Coffee Shop Theme -->
-            <article class="project-card">
-              <div class="project-image">
-                <img
-                  src="assets/images/coffee-shop-theme.png"
-                  alt="Coffee Shop WordPress theme"
-                  loading="lazy"
-                />
-                <div class="project-overlay">
-                  <a
-                    href="https://github.com/mingyue-sun-dev/coffee-shop-theme"
-                    class="overlay-btn"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github"></i> Code
-                  </a>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3>Coffee Shop Theme</h3>
-                <p>
-                  A custom WordPress e-commerce theme featuring responsive
-                  design, custom post types, and WooCommerce integration.
-                  Implements REST API search functionality, custom user roles,
-                  and environment-aware database configuration.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">WordPress</span>
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">SCSS/BEM</span>
-                  <span class="tech-tag">WooCommerce</span>
-                  <span class="tech-tag">REST API</span>
-                </div>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/mingyue-sun-dev/coffee-shop-theme"
-                    class="project-link"
-                    target="_blank"
-                  >
-                    <i class="fab fa-github"></i> View Code
-                  </a>
+                    rel="noopener"
+                    aria-label="Arch Studio live demo"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
                 </div>
               </div>
             </article>
@@ -531,184 +339,139 @@
         </div>
       </section>
 
-      <!-- Skills Section -->
-      <section id="skills" class="section">
+      <!-- Skills -->
+      <section class="section" id="skills">
         <div class="container">
-          <div class="section-header">
-            <h2>Technical Skills</h2>
-            <p>Technologies and tools I work with to bring ideas to life</p>
+          <h2 class="section-title reveal">
+            <span class="section-number">03.</span> Skills
+          </h2>
+        </div>
+
+        <div class="marquee-wrapper reveal">
+          <div class="marquee marquee-row-1">
+            <div class="marquee-track">
+              <span class="marquee-tag">JavaScript</span>
+              <span class="marquee-tag">TypeScript</span>
+              <span class="marquee-tag">React</span>
+              <span class="marquee-tag">Next.js</span>
+              <span class="marquee-tag">HTML5</span>
+              <span class="marquee-tag">CSS3</span>
+              <span class="marquee-tag">Tailwind CSS</span>
+              <span class="marquee-tag">Sass / SCSS</span>
+              <span class="marquee-tag">Node.js</span>
+              <span class="marquee-tag">Express.js</span>
+              <span class="marquee-tag">REST APIs</span>
+              <span class="marquee-tag">Figma</span>
+              <!-- Duplicate for seamless loop -->
+              <span class="marquee-tag">JavaScript</span>
+              <span class="marquee-tag">TypeScript</span>
+              <span class="marquee-tag">React</span>
+              <span class="marquee-tag">Next.js</span>
+              <span class="marquee-tag">HTML5</span>
+              <span class="marquee-tag">CSS3</span>
+              <span class="marquee-tag">Tailwind CSS</span>
+              <span class="marquee-tag">Sass / SCSS</span>
+              <span class="marquee-tag">Node.js</span>
+              <span class="marquee-tag">Express.js</span>
+              <span class="marquee-tag">REST APIs</span>
+              <span class="marquee-tag">Figma</span>
+            </div>
           </div>
 
-          <div class="skills-container">
-            <div class="skill-category">
-              <h3>
-                <i class="fab fa-js-square"></i>
-                Languages
-              </h3>
-              <div class="skills-list">
-                <span class="skill-item">JavaScript</span>
-                <span class="skill-item">TypeScript</span>
-                <span class="skill-item">HTML5</span>
-                <span class="skill-item">CSS3</span>
-                <span class="skill-item">SQL</span>
-                <span class="skill-item">Java</span>
-                <span class="skill-item">Python</span>
-                <span class="skill-item">PHP</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <h3>
-                <i class="fab fa-react"></i>
-                Front-end / UI
-              </h3>
-              <div class="skills-list">
-                <span class="skill-item">React</span>
-                <span class="skill-item">Next.js</span>
-                <span class="skill-item">Tailwind CSS</span>
-                <span class="skill-item">Sass/SCSS</span>
-                <span class="skill-item">Bootstrap</span>
-                <span class="skill-item">responsive design</span>
-                <span class="skill-item">Figma</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <h3>
-                <i class="fas fa-server"></i>
-                Back-end / APIs
-              </h3>
-              <div class="skills-list">
-                <span class="skill-item">REST APIs</span>
-                <span class="skill-item">Node.js</span>
-                <span class="skill-item">Express.js</span>
-                <span class="skill-item">Spring Boot</span>
-                <span class="skill-item">Supabase</span>
-                <span class="skill-item">MySQL</span>
-                <span class="skill-item">MongoDB</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <h3>
-                <i class="fas fa-tools"></i>
-                Tools / Dev Workflow:
-              </h3>
-              <div class="skills-list">
-                <span class="skill-item">Git</span>
-                <span class="skill-item">GitHub</span>
-                <span class="skill-item">VS Code</span>
-                <span class="skill-item">Postman</span>
-                <span class="skill-item">Vercel</span>
-                <span class="skill-item">Heroku</span>
-                <span class="skill-item">Webpack</span>
-                <span class="skill-item">Vite</span>
-                <span class="skill-item">ESLint</span>
-                <span class="skill-item">Prettier</span>
-                <span class="skill-item">npm</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <h3>
-                <i class="fas fa-globe"></i>
-                Other / Platforms
-              </h3>
-              <div class="skills-list">
-                <span class="skill-item">WordPress</span>
-                <span class="skill-item">Unbounce</span>
-                <span class="skill-item">VWO</span>
-                <span class="skill-item">Crazy Egg</span>
-              </div>
+          <div class="marquee marquee-row-2">
+            <div class="marquee-track marquee-reverse">
+              <span class="marquee-tag">Git</span>
+              <span class="marquee-tag">Spring Boot</span>
+              <span class="marquee-tag">MySQL</span>
+              <span class="marquee-tag">MongoDB</span>
+              <span class="marquee-tag">Supabase</span>
+              <span class="marquee-tag">Java</span>
+              <span class="marquee-tag">Python</span>
+              <span class="marquee-tag">PHP</span>
+              <span class="marquee-tag">Webpack</span>
+              <span class="marquee-tag">Vite</span>
+              <span class="marquee-tag">Vercel</span>
+              <span class="marquee-tag">Responsive Design</span>
+              <!-- Duplicate for seamless loop -->
+              <span class="marquee-tag">Git</span>
+              <span class="marquee-tag">Spring Boot</span>
+              <span class="marquee-tag">MySQL</span>
+              <span class="marquee-tag">MongoDB</span>
+              <span class="marquee-tag">Supabase</span>
+              <span class="marquee-tag">Java</span>
+              <span class="marquee-tag">Python</span>
+              <span class="marquee-tag">PHP</span>
+              <span class="marquee-tag">Webpack</span>
+              <span class="marquee-tag">Vite</span>
+              <span class="marquee-tag">Vercel</span>
+              <span class="marquee-tag">Responsive Design</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="section">
-        <div class="container contact-container">
-          <div class="contact-content">
-            <div class="contact-left">
-              <h2>Let's Work Together</h2>
-              <p class="contact-subtitle">
-                I'm always interested in new opportunities and challenging
-                projects. Whether you're looking to hire, have a project in
-                mind, or just want to connect, I'd love to hear from you.
-              </p>
+      <!-- Contact -->
+      <section class="section" id="contact">
+        <div class="container">
+          <h2 class="section-title section-title--large reveal">
+            <span class="section-number">04.</span>
+            Let's work<br /><span class="gradient-text">together.</span>
+          </h2>
+          <p class="contact-lead reveal">
+            I'm always interested in new opportunities and challenging projects.
+            Whether you're looking to hire, have a project in mind, or just want
+            to connect — I'd love to hear from you.
+          </p>
 
-              <div class="contact-details">
-                <div class="contact-method">
-                  <i class="fas fa-envelope"></i>
-                  <div>
-                    <h3>Email</h3>
-                    <p>
-                      <a href="mailto:mingyue.sun.dev@gmail.com"
-                        >mingyue.sun.dev@gmail.com</a
-                      >
-                    </p>
-                  </div>
-                </div>
-
-                <div class="contact-method">
-                  <i class="fas fa-clock"></i>
-                  <div>
-                    <h3>Response Time</h3>
-                    <p>Usually within 24 hours</p>
-                  </div>
-                </div>
+          <form class="contact-form reveal" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" />
               </div>
-
-              <div class="social-links">
-                <a
-                  href="https://github.com/mingyue-sun-dev"
-                  target="_blank"
-                  class="social-link"
-                  title="GitHub"
-                >
-                  <i class="fab fa-github"></i>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/mingyue-sun-dev"
-                  target="_blank"
-                  class="social-link"
-                  title="LinkedIn"
-                >
-                  <i class="fab fa-linkedin"></i>
-                </a>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required />
               </div>
             </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <div id="form-status" class="form-status"></div>
+            <button type="submit" class="btn btn-primary btn-submit magnetic">
+              <span class="btn-label">Let's Talk</span>
+              <span class="btn-loader" hidden>
+                <i class="fas fa-circle-notch fa-spin"></i> Sending
+              </span>
+            </button>
+          </form>
 
-            <div class="contact-form-container">
-              <form id="contact-form">
-                <div class="form-group">
-                  <label for="sender-name">Name</label>
-                  <input type="text" id="sender-name" name="name" />
-                </div>
-                <div class="form-group">
-                  <label for="sender-email">Email *</label>
-                  <input type="email" id="sender-email" name="email" required />
-                </div>
-                <div class="form-group">
-                  <label for="message">Message *</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="6"
-                    placeholder="Questions, ideas, or opportunities? Share them here!"
-                    required
-                  ></textarea>
-                </div>
-                <div id="form-message" class="form-message"></div>
-                <div class="form-actions">
-                  <button type="submit" class="btn btn-primary">
-                    <span class="btn-text">Send Message</span>
-                    <span class="btn-loading" style="display: none">
-                      <i class="fas fa-spinner fa-spin"></i> Sending...
-                    </span>
-                  </button>
-                </div>
-              </form>
+          <div class="contact-alt reveal">
+            <p>Or reach me directly at</p>
+            <a href="mailto:mingyue.sun.dev@gmail.com" class="contact-email">
+              mingyue.sun.dev@gmail.com
+            </a>
+            <div class="contact-socials">
+              <a
+                href="https://github.com/mingyue-sun-dev"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/mingyue-sun-dev"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -716,21 +479,17 @@
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
       <div class="container">
-        <p>
-          &copy; <span id="current-year"></span> Mingyue Sun. Built with ❤️ + ☕
-        </p>
+        <p>Built by Mingyue Sun</p>
       </div>
     </footer>
 
     <!-- EmailJS -->
     <script
-      type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
       defer
     ></script>
-    <!-- Main Script -->
-    <script type="text/javascript" src="script.js" defer></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
